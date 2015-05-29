@@ -1,0 +1,230 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Stacked Rows Demo</title>
+        <meta name="description" content="A simple demonstration of the stackedRows.js jQuery plugin. StackedRows.js makes your tables look good in mobile and tablets.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>	
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<link href="jquery.stackedrows.css" rel="stylesheet">
+		<script src="jquery.stackedrows.js"></script>     
+
+		<style>		
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed, 
+		figure, figcaption, footer, header, hgroup, 
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure, 
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		body {
+			background:#ccc;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+			border:1px solid #ddd;
+			width:100%;
+			margin:25px 0;
+		}	
+		table td, 
+		table th {
+			border-top: 1px solid #ddd;
+			border-right:1px solid #ddd;
+		  	padding: 8px;
+		}
+		table th {
+			border-bottom: 2px solid #ddd;
+		}
+		
+		.table {
+			padding:35px;
+			background: #fff;
+			margin-bottom:35px;
+		}
+		img {
+			max-width: 100%;
+		}
+
+		p  {
+			line-height: 20px;
+		}
+		 
+		h1,h2,h3,h4,h5,h6,thead {
+			font-family: 'Bree Serif', serif;
+		}
+		
+		h1 {
+			margin-bottom:20px;
+			font-size: 26px;
+		}		
+		.intro {
+			background:#fff;
+			border-bottom: 1px dashed #ccc;
+		}
+		.intro h1 {
+			font-weight: bold;
+			font-size: 30px;
+			text-align: center;			
+			padding: 30px 0 0 0;
+			line-height: 38px;
+			margin-bottom:15px;
+		}
+		.intro p {
+			text-align: center;
+			margin-bottom: 35px;
+		}
+		
+		</style>
+		
+		<script>
+		$(document).ready(function(){
+			$('.table1 table').stackedRows();
+			$('.table2 table').stackedRows({
+				firstRowHeader : false				 
+			});
+			$('.table3 table').stackedRows({
+				altRowStyle : false				 
+			});
+		});
+	</script>
+		
+    </head>
+    <body>
+	
+   	<div class="intro">
+		<h1>
+        	<a style="text-decoration:none; color:#666;" href="http://fearlessflyer.com/?p=4377">StackedRows.js <span style="color:red;">Demo</span></a></h1>
+     		<p>A jQuery Plugin for Making your HTML Tables mobile friendly - by stacking the columns vertically within each row.</p>
+	</div>
+    	
+
+
+	<div class="table table1">	
+	 <h1>Table 1</h1>
+	 <p>This table has a standard "thead" and "th" for the column names, with default options.</p>	 
+		<table>
+			 <thead>
+			  <tr >
+				 <th>Month</th>
+				 <th>Savings</th>				 
+				 <th>Type</th>
+				 <th>Comments</th>
+			  </tr>
+			 </thead>			 
+			 <tbody>
+			  <tr>
+				 <td>January</td>
+				 <td>$100</td>				
+				 <td>Numquam</td>
+				 <td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</td>
+			  </tr>
+			  <tr>
+			 	 <td>February</td>
+				 <td>$500</td>				
+				 <td>Labore</td>
+				 <td>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem</td>
+			  </tr>
+			  <tr>
+			 	 <td>March</td>
+				 <td>$850</td>				
+				 <td>Adipisci</td>
+				 <td>Exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</td>
+			  </tr>
+			 </tbody>
+		</table>
+	
+	</div>
+
+
+	<div class="table table2">	
+	 <h1>Table 2</h1>
+	 <p>This table has no "thead" and first row has no column names. You need to pass option "firstRowHeader" to "false"</p>	 
+		<table>
+			  <tr>
+				 <td>January</td>
+				 <td>$100</td>				
+				 <td>Numquam</td>
+				 <td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</td>
+			  </tr>
+			  <tr>
+			 	 <td>February</td>
+				 <td>$500</td>				
+				 <td>Labore</td>
+				 <td>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem</td>
+			  </tr>
+			  <tr>
+			 	 <td>March</td>
+				 <td>$850</td>				
+				 <td>Adipisci</td>
+				 <td>Exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</td>
+			  </tr>
+		</table>
+	
+	</div>
+	
+	<div class="table table3">	
+	 <h1>Table 3</h1>
+	 <p>Table with images, with "altRowStyle" set to "false"</p>	 
+		<table>
+			<thead>
+			  <tr >
+				 <th>Month</th>
+				 <th>Savings</th>				 
+				 <th>Type</th>
+				 <th>Comments</th>
+			 	 <th>Image</th>
+			  </tr>
+			 </thead>
+			  <tr>
+				 <td>January</td>
+				 <td>$100</td>				
+				 <td>Numquam</td>
+				 <td>Exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</td>
+				 <td><img src="images/1.jpg" /></td>
+			  </tr>
+			  <tr>
+			 	 <td>February</td>
+				 <td>$500</td>				
+				 <td>Labore</td>
+				 <td>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem</td>
+				 <td><img src="images/2.jpg" /></td>
+			  </tr>
+			  <tr>
+			 	 <td>March</td>
+				 <td>$850</td>				
+				 <td>Adipisci</td>
+				 <td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</td>
+				 <td><img src="images/3.jpg" /></td>				 
+			  </tr>
+		</table>
+	
+	</div>
+	
+	</body>
+</html>
