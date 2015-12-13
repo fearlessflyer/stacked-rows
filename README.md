@@ -1,6 +1,8 @@
 # stacked-rows
 A short and simple jQuery plugin that will fix your tables in mobile view. New rows of your original data is created and displayed through media queries
 
+![alt tag](http://michaelsoriano.com/wp-content/uploads/2015/07/stacked-rows1.jpg)
+
 <h3>How to use:</h3>
 
 Just like a regular jQuery plugin, you need to have jQuery included in page to use. Then simply call inside a document .ready() with your selectors and options included. 
