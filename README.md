@@ -1,3 +1,6 @@
+# ARCHIVED / DISCONTINUED
+I've decided to discontinue the development of this plugin to concentrate my efforts on other projects.
+
 # stacked-rows
 A short and simple jQuery plugin that will fix your tables in mobile view. New rows of your original data is created and displayed through media queries
 
